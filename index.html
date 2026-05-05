@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mosaïque d'images</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .mosaique {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 150px);
+            grid-auto-rows: 150px;
+        }
+
+        .mosaique img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mosaique">
+    <!-- On répète les images -->
+    <script>
+        const container = document.currentScript.parentElement;
+
+        for (let i = 0; i < 100; i++) {
+            const img1 = document.createElement("img");
+            img1.src = "Melanie.jpg";
+
+            const img2 = document.createElement("img");
+            img2.src = "cm.jfif";
+
+            container.appendChild(img1);
+            container.appendChild(img2);
+        }
+    </script>
+</div>
+
+</body>
+</html>
